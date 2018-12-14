@@ -1,24 +1,29 @@
-# README
+# Blog Applicaiton
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a blog application created using Ruby 2.4.2, Rails 5.1.6.1, Bootstrap 4.1.3, [this tutorial](https://medium.com/@bruno_boehm/full-blog-app-tutorial-on-rails-zero-to-deploy-4c19e8174791), and [this theme](https://bootswatch.com/minty/).
 
-Things you may want to cover:
+Configured using macOS High Sierra.
 
-* Ruby version
+### Setup
 
-* System dependencies
+First, install the gems required by the application:
 
-* Configuration
+```bundle```
 
-* Database creation
+Next, execute the database migrations/schema setup:
 
-* Database initialization
+```bundle exec rake db:setup```
 
-* How to run the test suite
+Finally, run the app:
 
-* Services (job queues, cache servers, search engines, etc.)
+```rails server```
 
-* Deployment instructions
+The app can be accessed at [http://0.0.0.0:3000/].
 
-* ...
+### Features
+
+* View posts
+* View posts by category
+* Add new posts
+* Edit posts
+* Delete posts
