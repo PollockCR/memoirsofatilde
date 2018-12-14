@@ -3,7 +3,7 @@
   <%= f.collection_select(:category_id, Category.all, :id, :name, { prompt: "Choose a category" }) %><br>
   <%= f.label :title %><br>
   <%= f.text_field :title, placeholder: "Post Title" %><br>
-  <%= f.label :content %>
+  <%= f.label :content %><br>
   <%= f.text_area :content, size: "60x12", placeholder: "Type the post text here." %><br>
 
   <%= f.submit %>
