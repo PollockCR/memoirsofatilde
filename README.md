@@ -6,15 +6,21 @@ Configured using macOS High Sierra.
 
 ### Setup
 
-First, install the gems required by the application:
+Clone this directory
+
+```git clone https://github.com/PollockCR/memoirsofatilde```
+
+```cd memoirsofatilde```
+
+Install the gems required by the application:
 
 ```bundle```
 
-Next, execute the database migrations/schema setup:
+Execute the database migrations/schema setup:
 
 ```bundle exec rake db:setup```
 
-Finally, run the app:
+Run the app:
 
 ```rails server```
 
