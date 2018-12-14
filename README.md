@@ -8,21 +8,21 @@ Configured using macOS High Sierra.
 
 Clone this directory
 
-```git clone https://github.com/PollockCR/memoirsofatilde```
+```$ git clone https://github.com/PollockCR/memoirsofatilde```
 
-```cd memoirsofatilde```
+```$ cd memoirsofatilde```
 
 Install the gems required by the application:
 
-```bundle```
+```$ bundle```
 
 Execute the database migrations/schema setup:
 
-```bundle exec rake db:setup```
+```$ bundle exec rake db:setup```
 
 Run the app:
 
-```rails server```
+```$ rails server```
 
 The app can be accessed at [http://0.0.0.0:3000/].
 
