@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
 <h2><%= link_to post.title, post %></h2>
+<%= image_tag post.image_url.to_s %>
 <p><%= simple_format(post.content) %></p>
 <hr>
 <% end %>
