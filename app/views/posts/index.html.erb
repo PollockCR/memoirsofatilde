@@ -1,6 +1,8 @@
 <% @posts.each do |post| %>
+<article class = "post">
 <h2><%= link_to post.title, post %></h2>
-<%= image_tag post.image_url.to_s %>
+<%= image_tag post.image_url.to_s, class: "img-fluid" %>
 <p><%= simple_format(post.content) %></p>
 <hr>
+</aricle>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_for(@post), html: { multipart: true } do |f| %>
+<%= form_for @post, html: { multipart: true } do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.collection_select(:category_id, Category.all, :id, :name, { prompt: "Choose a category" }) %><br>
   <%= f.label :title %><br>
