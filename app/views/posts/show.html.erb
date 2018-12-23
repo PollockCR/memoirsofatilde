@@ -2,6 +2,12 @@
 <h2><%= @post.title %></h2>
 <%= image_tag @post.image_url.to_s, class: "img-fluid" %>
 <p><%= simple_format(@post.content) %></p>
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+<% if session[:admin] then %>
+  <%= link_to edit_post_path(@post), class: "btn btn-primary" do %>
+    <span class = "glyphicon glyphicon-align-left" area-hidden = "false"></span> Edit
+  <% end %>
+  <%= link_to @post, method: :delete, data: {confirm: "Are you sure you want to delete this post?"}, class: "btn btn-primary" do %>
+    <span class="glyphicon glyphicon-trash" area-hidden="false"></span> Delete
+  <% end %>
+<% end %>
 </article>
