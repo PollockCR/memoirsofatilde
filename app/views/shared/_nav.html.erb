@@ -1,6 +1,6 @@
 <% if session[:admin] then %>
   <%= link_to new_post_path do %>
-    <span class = "btn btn-outline-primary" area-hidden = "true">New Post</span>
+    <button class = "btn btn-outline-primary" area-hidden = "true">New Post</button>
   <% end %>
 <% end %>
 <li><%= link_to "All Categories", root_path %></li>

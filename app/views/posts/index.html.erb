@@ -4,9 +4,7 @@
 <%= image_tag post.image_url.to_s, class: "img-fluid" %>
 <p><%= simple_format(post.content) %></p>
 <% if session[:admin] then %>
-  <%= link_to edit_post_path(post) do %>
-    <span class = "glyphicon glyphicon-align-left" area-hidden = "false"></span>
-  <% end %>
+  <%= link_to edit_post_path(post) do %>Edit<% end %>
 <% end %>
 <hr>
 </article>
