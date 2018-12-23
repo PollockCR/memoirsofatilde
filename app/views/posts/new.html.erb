@@ -1,5 +1,7 @@
 <h1>New Post</h1>
 <p>
   <%= render 'form' %>
-  <%= link_to "Back", root_path %>
 </p>
+<%= link_to root_path do %>
+  <button type="button" class="btn btn-outline-primary">Cancel</button>
+<% end %>
