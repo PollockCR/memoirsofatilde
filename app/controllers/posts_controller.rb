@@ -13,6 +13,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    if request.path != post_path(@post)
+      redirect_to @post, status: :moved_permanently
+    end
   end
 
   def new
@@ -51,13 +54,13 @@ class PostsController < ApplicationController
 
 private
 
-  # mark params as required
+  # mark params as requsired
   def post_params
-    params.require(:post).permit(:title, :content, :category_id, :image)
+    params.require(:post).permit(:title, :content, :category_id, :image, :slug)
   end
 
   def find_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
 protected
